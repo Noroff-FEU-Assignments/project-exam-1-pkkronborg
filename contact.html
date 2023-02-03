@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta
+      name="description"
+      content="Blog about visiting stadiums around the world"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <title>Tour of Stadiums</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link href="styles/styles.css" rel="stylesheet" />
+    <script
+      src="https://kit.fontawesome.com/c279bd19f7.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <div class="main-width header-main">
+        <div class="header-part1">
+          <a href="index.html" title="Homepage" class="site-name"
+            >Tour of stadiums</a
+          >
+          <label for="hamburger" class="menu">
+            <i class="fa fa-bars fa-2x" title="hamburger menu"></i>
+          </label>
+        </div>
+        <input type="checkbox" id="hamburger" />
+        <nav>
+          <ul>
+            <li>
+              <a href="index.html" title="Homepage">Home</a>
+            </li>
+            <li><a href="list.html" title="List of posts">Blog</a></li>
+            <li><a href="about.html" title="About">About</a></li>
+            <li>
+              <a href="contact.html" title="Contact" class="selected-page"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="main-width main-col align-center">
+        <h1>Contact</h1>
+        <div class="form-container">
+          <form class="contact" id="form">
+            <div class="form_elements">
+              <label>
+                Name (required)
+                <input name="name" id="fullName" />
+              </label>
+              <div class="formError" id="fullNameError">
+                Name needs to be more than 5 charachters
+              </div>
+            </div>
+            <div class="form_elements">
+              <label>
+                Email address (required)
+                <input name="email" id="email" />
+              </label>
+              <div class="formError" id="emailError">Email is not valid</div>
+            </div>
+            <div class="form_elements">
+              <label>
+                Subject (required)
+                <input name="subject" id="subject" />
+              </label>
+              <div class="formError" id="subjectError">
+                Subject needs to be more than 15 charachters
+              </div>
+            </div>
+            <div class="form_elements">
+              <label>
+                Message (required)
+                <textarea cols="40" rows="10" id="contactMessage"></textarea>
+                <div class="formError" id="contactMessageError">
+                  Message needs to be more than 25 charachters
+                </div>
+              </label>
+            </div>
+            <button type="submit" class="cta">Send</button>
+            <div id="successMessage">Message successfully sendt!</div>
+          </form>
+        </div>
+      </div>
+    </main>
+    <footer>Copyright &copy;</footer>
+  </body>
+</html>
+<script src="js/contact.js"></script>

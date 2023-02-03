@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="description" content="List of blog post" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <title>Tour of Stadiums</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link href="styles/styles.css" rel="stylesheet" />
+    <link href="styles/blog.css" rel="stylesheet" />
+    <script
+      src="https://kit.fontawesome.com/c279bd19f7.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <div class="main-width header-main">
+        <div class="header-part1">
+          <a href="index.html" title="Homepage" class="site-name"
+            >Tour of stadiums</a
+          >
+          <label for="hamburger" class="menu">
+            <i class="fa fa-bars fa-2x" title="hamburger menu"></i>
+          </label>
+        </div>
+        <input type="checkbox" id="hamburger" />
+        <nav>
+          <ul>
+            <li>
+              <a href="index.html" title="Homepage">Home</a>
+            </li>
+            <li>
+              <a href="list.html" title="List of posts" class="selected-page"
+                >Blog</a
+              >
+            </li>
+            <li><a href="about.html" title="About">About</a></li>
+            <li><a href="contact.html" title="Contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="main-width main-col">
+        <h1>Posts</h1>
+        <section title="blog list" id="blogList"></section>
+        <button class="load-more">Load more posts</button>
+      </div>
+    </main>
+    <footer>Copyright &copy;</footer>
+  </body>
+</html>
+<script src="js/categories.js"></script>
+<script src="js/blog.js"></script>
