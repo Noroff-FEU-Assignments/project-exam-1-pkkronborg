@@ -13,6 +13,13 @@ h2 {
   margin-top: 0;
 }
 
+p {
+  max-width: 600px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 2 2 2;
+}
+
 .top-details {
   display: flex;
   column-gap: 10%;
@@ -30,13 +37,6 @@ h2 {
   height: auto;
 }
 
-p {
-  max-width: 600px;
-  margin-right: auto;
-  margin-left: auto;
-  padding: 0 2 2 2;
-}
-
 .details-list p {
   display: none;
 }
@@ -51,11 +51,17 @@ p {
 }
 
 .details-list li {
-  display: table-row;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.wp-container-3 {
+  display: flex;
 }
 
 .details-list ul {
   margin-top: 0;
+  padding-left: 2rem;
 }
 
 .details-text {
