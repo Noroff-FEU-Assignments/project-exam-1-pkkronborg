@@ -46,6 +46,7 @@ async function getDetails() {
     document.getElementById("postImage").onclick = function () {
       modalContainer.style.display = "flex";
       modalImage.src = result._embedded["wp:featuredmedia"][0].source_url;
+      modalImage.alt = result._embedded["wp:featuredmedia"][0].alt_text;
     };
     // Click outside the modal to close the modal
     // Source: https://stackoverflow.com/questions/37573608/how-to-make-modal-close-on-click-outside

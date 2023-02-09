@@ -133,6 +133,7 @@ footer {
 .header-part1 {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .welcome-section {

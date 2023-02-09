@@ -51,7 +51,7 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: white;
+  background-color: #dbdbdb;
 }
 
 .details-list li {
@@ -88,7 +88,7 @@ p {
   overflow-y: auto;
   top: 0;
   left: 0;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgb(138, 143, 129, 0.95);
 }
 
 .modal-image {
