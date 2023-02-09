@@ -12,17 +12,21 @@ carouselOne.innerHTML = "";
 
 async function getLatestPost() {
   try {
+    // get the 9 latest posts
     const response = await fetch(latestPosts);
     const result = await response.json();
     for (let i = 0; i < result.length; i++) {
+      // change date format
       let date = result[i].date;
       let newDate = new Date(date);
       let postedDate = `${newDate.toLocaleString("no-NO", {
         timeZone: "Europe/Oslo",
       })}`;
+      // Get the category id for each post and give it the correct country name
       let categoryName = await categories.find(
         (element) => element.id === result[i].categories[0]
       ).name;
+      // create html for the three carousel slides
       if (i <= 2) {
         carouselOne.innerHTML += `
         <a href="post.html?id=${result[i].id}" class="card" title="${result[i].title.rendered}">
@@ -63,12 +67,13 @@ async function getLatestPost() {
   }
 }
 
-// carouselIndex starts at 1, so that if it reaches 0 we can start at the end
+// source: https://www.w3schools.com/howto/howto_js_slideshow.asp
+// carouselIndex starts at 1, so that if it reaches 0 we can start at the last slide
 let carouselIndex = 1;
 displayCarousel(carouselIndex);
 
 function displayCarousel(n) {
-  // If carousel goes over the last slide it starts at the first slide
+  // If carousel goes above the last slide it starts at the first slide
   if (n > carousel.length) {
     carouselIndex = 1;
   }
@@ -80,7 +85,7 @@ function displayCarousel(n) {
   for (let i = 0; i < carousel.length; i++) {
     carousel[i].style.display = "none";
   }
-  // Show slide that are in focus, -1 to subtract setting the index at 1 in the begining
+  // Show slide that are in focus, -1 to subtract setting the carouselIndex to 1
   carousel[carouselIndex - 1].style.display = "grid";
 }
 

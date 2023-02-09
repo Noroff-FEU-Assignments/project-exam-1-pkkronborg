@@ -13,7 +13,7 @@ async function getDetails() {
   try {
     const response = await fetch(url);
     const result = await response.json();
-    // get country name from categories
+    // get country(category) name from categories
     const categoryName = await categories.find(
       (element) => element.id === result.categories[0]
     ).name;
@@ -26,18 +26,25 @@ async function getDetails() {
           <div class="detail-info">
             <h1>${result.title.rendered}</h1>
             <h2>Country: ${categoryName}</h2>
-            <div class="details-list"><h2>Stadium facts</h2> ${result.content.rendered}</div>
+            <div class="details-list">
+              <h2>Stadium facts</h2> 
+              ${result.content.rendered}
+            </div>
           </div>
           <div class="detail-image">
             <img src="${result._embedded["wp:featuredmedia"][0].source_url}" alt="${result._embedded["wp:featuredmedia"][0].alt_text}" class="post-image" id="postImage">
           </div> 
         </div>
-        <div class="details-text"><h2>My expericence of ${result.title.rendered}</h2>${result.content.rendered}</div>
+        <div class="details-text">
+          <h2>My expericence of ${result.title.rendered}</h2>
+          ${result.content.rendered}
+        </div>
     </div>`;
 
     // click on the post image to open a modal
+    // Source: https://www.w3schools.com/howto/howto_css_modal_images.asp
     document.getElementById("postImage").onclick = function () {
-      modalContainer.style.display = "block";
+      modalContainer.style.display = "flex";
       modalImage.src = result._embedded["wp:featuredmedia"][0].source_url;
     };
     // Click outside the modal to close the modal

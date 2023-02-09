@@ -1,9 +1,11 @@
 button {
-  background-color: #a80000;
+  background-color: #3e2e42;
+  color: white;
   border: 1px solid black;
   width: 10rem;
   padding: 1rem;
   align-self: center;
+  cursor: pointer;
 }
 
 img {
@@ -46,7 +48,7 @@ header {
   height: 2rem;
   position: fixed;
   width: 100%;
-  background-color: grey;
+  background-color: #dbdbdb;
   padding: 1rem 0;
 }
 
@@ -91,7 +93,7 @@ footer {
   padding: 1rem 0;
   display: flex;
   justify-content: center;
-  background-color: white;
+  background-color: #dbdbdb;
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
   width: 100%;
@@ -134,7 +136,7 @@ footer {
 }
 
 .welcome-section {
-  background-color: white;
+  background-color: #dbdbdb;
   padding: 2rem;
 }
 
@@ -195,7 +197,7 @@ Index page styles
 
 .card {
   border: 1px solid black;
-  background-color: white;
+  background-color: #dbdbdb;
 }
 
 i:hover {
@@ -240,15 +242,12 @@ Contact
   margin-bottom: 1rem;
   border: 1px solid black;
   width: 30rem;
-  background-color: white;
+  background-color: #dbdbdb;
 }
 
-.email {
-  border: #1b203d;
-}
-
+.email,
 .message {
-  border: #1b203d;
+  border: black;
 }
 
 .send {
@@ -258,7 +257,7 @@ Contact
 
 .formError {
   visibility: hidden;
-  color: #d90000;
+  color: #b50000;
 }
 
 .form_elements,
@@ -360,5 +359,14 @@ textarea {
 
   .cta {
     width: 5rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  body {
+    font-size: 0.7rem;
+  }
+  .site-name {
+    font-size: 1.5rem;
   }
 }

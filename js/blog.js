@@ -11,7 +11,6 @@ async function getPosts() {
     const response = await fetch(list);
     const result = await response.json();
     console.log(result);
-
     for (let i = 0; i < result.length; i++) {
       let date = result[i].date;
       let newDate = new Date(date);
