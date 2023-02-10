@@ -31,7 +31,7 @@ async function getLatestPost() {
         carouselOne.innerHTML += `
         <a href="post.html?id=${result[i].id}" class="card" title="${result[i].title.rendered}">
           <img src="${result[i]._embedded["wp:featuredmedia"][0].source_url}" alt="${result[i]._embedded["wp:featuredmedia"][0].alt_text}">
-          <div class="detail-info">
+          <div>
             <div class="card-heading">${result[i].title.rendered}</div>
             <div class="card-category">${categoryName}</div>
             <div class="card-text">Posted: ${postedDate}</div>
@@ -42,7 +42,7 @@ async function getLatestPost() {
         carouselTwo.innerHTML += `
         <a href="post.html?id=${result[i].id}" class="card" title="${result[i].title.rendered}">
           <img src="${result[i]._embedded["wp:featuredmedia"][0].source_url}" alt="${result[i]._embedded["wp:featuredmedia"][0].alt_text}">
-          <div class="detail-info">
+          <div>
             <div class="card-heading">${result[i].title.rendered}</div>
             <div class="card-category">${categoryName}</div>
             <div class="card-text">Posted: ${postedDate}</div>
@@ -53,7 +53,7 @@ async function getLatestPost() {
         carouselThree.innerHTML += `
         <a href="post.html?id=${result[i].id}" class="card" title="${result[i].title.rendered}">
           <img src="${result[i]._embedded["wp:featuredmedia"][0].source_url}" alt="${result[i]._embedded["wp:featuredmedia"][0].alt_text}">
-          <div class="detail-info">
+          <div>
             <div class="card-heading">${result[i].title.rendered}</div>
             <div class="card-category">${categoryName}</div>
             <div class="card-text">Posted: ${postedDate}</div>

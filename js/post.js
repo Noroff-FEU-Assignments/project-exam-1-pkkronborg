@@ -25,9 +25,9 @@ async function getDetails() {
         <div class="top-details">
           <div class="detail-info">
             <h1>${result.title.rendered}</h1>
-            <h2>Country: ${categoryName}</h2>
+            <h2 class="post-h2">${categoryName}</h2>
             <div class="details-list">
-              <h2>Stadium facts</h2> 
+              <h2 class="post-h2">Stadium facts</h2> 
               ${result.content.rendered}
             </div>
           </div>
@@ -36,7 +36,7 @@ async function getDetails() {
           </div> 
         </div>
         <div class="details-text">
-          <h2>My expericence of ${result.title.rendered}</h2>
+          <h2 class="post-h2">My expericence of ${result.title.rendered}</h2>
           ${result.content.rendered}
         </div>
     </div>`;
