@@ -414,6 +414,10 @@ textarea {
   border: 1px solid black;
 }
 
+textarea {
+  resize: none;
+}
+
 #successMessage {
   visibility: hidden;
 }
