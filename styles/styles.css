@@ -185,10 +185,7 @@ Index page styles
   font-size: 1.5rem;
   padding: 1rem;
 }
-.card-text {
-  text-align: center;
-  padding-bottom: 1rem;
-}
+.card-text,
 .card-category {
   text-align: center;
   padding-bottom: 1rem;
