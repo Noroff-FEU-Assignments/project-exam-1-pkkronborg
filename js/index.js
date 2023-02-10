@@ -7,7 +7,6 @@ const carouselOne = document.querySelector(".carousel-one");
 const carouselTwo = document.querySelector(".carousel-two");
 const carouselThree = document.querySelector(".carousel-three");
 
-console.log(prevCarousel);
 carouselOne.innerHTML = "";
 
 async function getLatestPost() {
@@ -49,7 +48,7 @@ async function getLatestPost() {
       }
     }
   } catch {
-    console.log("Ups");
+    carouselOne.innerHTML = "<h2>Something went wrong, please try again</h2>";
   }
 }
 

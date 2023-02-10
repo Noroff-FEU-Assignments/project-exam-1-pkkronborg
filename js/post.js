@@ -56,7 +56,7 @@ async function getDetails() {
       }
     };
   } catch {
-    console.log("UPS");
+    postContainer.innerHTML = "<h2>Something went wrong, please try again</h2>";
   }
 }
 getDetails();

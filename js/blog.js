@@ -1,6 +1,7 @@
 const url = "https://tourofstadiums.kronia.one/wp-json/wp/v2/posts";
 const blogList = document.getElementById("blogList");
 const loadMore = document.querySelector(".load-more");
+const h1 = document.querySelector("h1");
 console.log(loadMore);
 blogList.innerHTML = "";
 let n = 1;
@@ -38,7 +39,8 @@ async function getPosts() {
       loadMore.style.display = "none";
     }
   } catch {
-    console.log("UPS");
+    h1.innerHTML = "Something went wrong, please try again";
+    loadMore.style.display = "none";
   }
 }
 getPosts(n);
