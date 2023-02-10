@@ -29,8 +29,10 @@ async function getPosts() {
       </a>
       `;
     }
+
     // get total pages from wordpress
     const totalPages = response.headers.get("X-WP-TotalPages");
+
     // compare if we have reached the last page, if so hide load more button
     if (n == totalPages) {
       loadMore.style.display = "none";

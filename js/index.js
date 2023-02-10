@@ -22,44 +22,30 @@ async function getLatestPost() {
       let postedDate = `${newDate.toLocaleString("no-NO", {
         timeZone: "Europe/Oslo",
       })}`;
+
       // Get the category id for each post and give it the correct country name
       let categoryName = await categories.find(
         (element) => element.id === result[i].categories[0]
       ).name;
+
       // create html for the three carousel slides
+      let html = `
+      <a href="post.html?id=${result[i].id}" class="card" title="${result[i].title.rendered}">
+        <img src="${result[i]._embedded["wp:featuredmedia"][0].source_url}" alt="${result[i]._embedded["wp:featuredmedia"][0].alt_text}">
+        <div>
+          <div class="card-heading">${result[i].title.rendered}</div>
+          <div class="card-category">${categoryName}</div>
+          <div class="card-text">Posted: ${postedDate}</div>
+        </div>
+      </a>
+      `;
+
       if (i <= 2) {
-        carouselOne.innerHTML += `
-        <a href="post.html?id=${result[i].id}" class="card" title="${result[i].title.rendered}">
-          <img src="${result[i]._embedded["wp:featuredmedia"][0].source_url}" alt="${result[i]._embedded["wp:featuredmedia"][0].alt_text}">
-          <div>
-            <div class="card-heading">${result[i].title.rendered}</div>
-            <div class="card-category">${categoryName}</div>
-            <div class="card-text">Posted: ${postedDate}</div>
-          </div>
-        </a>
-        `;
+        carouselOne.innerHTML += html;
       } else if (i > 2 && i <= 5) {
-        carouselTwo.innerHTML += `
-        <a href="post.html?id=${result[i].id}" class="card" title="${result[i].title.rendered}">
-          <img src="${result[i]._embedded["wp:featuredmedia"][0].source_url}" alt="${result[i]._embedded["wp:featuredmedia"][0].alt_text}">
-          <div>
-            <div class="card-heading">${result[i].title.rendered}</div>
-            <div class="card-category">${categoryName}</div>
-            <div class="card-text">Posted: ${postedDate}</div>
-          </div>
-        </a>
-        `;
+        carouselTwo.innerHTML += html;
       } else {
-        carouselThree.innerHTML += `
-        <a href="post.html?id=${result[i].id}" class="card" title="${result[i].title.rendered}">
-          <img src="${result[i]._embedded["wp:featuredmedia"][0].source_url}" alt="${result[i]._embedded["wp:featuredmedia"][0].alt_text}">
-          <div>
-            <div class="card-heading">${result[i].title.rendered}</div>
-            <div class="card-category">${categoryName}</div>
-            <div class="card-text">Posted: ${postedDate}</div>
-          </div>
-        </a>
-        `;
+        carouselThree.innerHTML += html;
       }
     }
   } catch {
