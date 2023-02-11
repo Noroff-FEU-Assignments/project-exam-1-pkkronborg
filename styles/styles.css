@@ -460,6 +460,7 @@ textarea {
 
   header {
     height: auto;
+    padding-top: 2%;
   }
 
   nav ul {
@@ -472,16 +473,11 @@ textarea {
     margin-top: 25rem;
   }
 
-  header {
-    padding-top: 2%;
-  }
-
   .main-width {
     width: 96%;
   }
 
   .carousel-container {
-    display: flex;
     flex-direction: column;
   }
 
