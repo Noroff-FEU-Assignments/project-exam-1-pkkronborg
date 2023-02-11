@@ -53,21 +53,22 @@ async function getLatestPost() {
 }
 
 // source: https://www.w3schools.com/howto/howto_js_slideshow.asp
-// carouselIndex starts at 1, so that if it reaches 0 we can start at the last slide
+// carouselCount starts at 1, so that if it reaches 0 we can start at the last slide
 let carouselIndex = 1;
+const length = carousel.length;
 displayCarousel(carouselIndex);
 
 function displayCarousel(n) {
   // If carousel goes above the last slide it starts at the first slide
-  if (n > carousel.length) {
+  if (n > length) {
     carouselIndex = 1;
   }
   // If carousel goes under the first slide it goes to the last slide
   if (n < 1) {
-    carouselIndex = carousel.length;
+    carouselIndex = length;
   }
   // Hide all slides
-  for (let i = 0; i < carousel.length; i++) {
+  for (let i = 0; i < length; i++) {
     carousel[i].style.display = "none";
   }
   // Show slide that are in focus, -1 to subtract setting the carouselIndex to 1
