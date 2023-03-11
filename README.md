@@ -2,11 +2,11 @@
 
 ![Screenshot of Tour of stadiums website](https://user-images.githubusercontent.com/59437536/224507757-e82b5838-bdc2-4548-9e67-2770fb7eee3c.png)
 
-This project is a stadium travellers blog. It posts are from football stadiums around the world that the blogger has visited. 
+This project is a stadium travellers blog. The posts are from football stadiums around the world that the blogger has visited. 
 
 ## Description
 
-Tour of stadiums is a blog created for project exam 1 at Noroff. 
+Tour of stadiums is a blog created for project exam 1 at Noroff.
 The blog posts are posted in Wordpress.
 
 Site architecture
