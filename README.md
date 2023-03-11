@@ -7,7 +7,7 @@ This project is a stadium travellers blog. The posts are from football stadiums 
 ## Description
 
 Tour of stadiums is a blog created for project exam 1 at Noroff.
-The blog posts are posted in Wordpress.
+
 
 Site architecture
 - Home
@@ -15,6 +15,15 @@ Site architecture
 - Blog post details
 - About
 - Contact
+
+Focus:
+- The blog posts are posted in Wordpress.
+- Getting data from WP with WP rest API
+- Home page with caroussel
+- Blog list showing some posts and then load more if you want to see more
+- Blog post details with a query string parameter, clicking on a image opens a modal.
+- Contact me with JS validation on input field
+
 
 ## Built With
 
